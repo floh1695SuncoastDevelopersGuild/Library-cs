@@ -9,8 +9,8 @@ namespace Library.Models
     {
         public int ID { get; set; }
 
-        //public int BookDataID { get; set; }
-        //public BookData BookData { get; set; }
+        public int BookDataID { get; set; }
+        public BookData BookData { get; set; }
 
         public bool IsCheckedOut { get; set; }
         public DateTime DueBackDate { get; set; }
