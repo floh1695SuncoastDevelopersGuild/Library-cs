@@ -21,7 +21,7 @@ namespace Library.Controllers
             return author;
         }
 
-        // TODO: Cannot accept DataTime's that are null
+        // TODO: Currently can't accept any null datetimes, it should be able to
         public Author Post(Author author)
         {
             using (var db = new LibraryContext())
