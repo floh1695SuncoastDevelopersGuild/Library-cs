@@ -188,6 +188,7 @@
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReaderController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -219,6 +220,10 @@
     <Compile Include="Migrations\201804200127329_AddedReader.cs" />
     <Compile Include="Migrations\201804200127329_AddedReader.Designer.cs">
       <DependentUpon>201804200127329_AddedReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804201620490_AddedReaderToContext.cs" />
+    <Compile Include="Migrations\201804201620490_AddedReaderToContext.Designer.cs">
+      <DependentUpon>201804201620490_AddedReaderToContext.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
@@ -318,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804200127329_AddedReader.resx">
       <DependentUpon>201804200127329_AddedReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804201620490_AddedReaderToContext.resx">
+      <DependentUpon>201804201620490_AddedReaderToContext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
