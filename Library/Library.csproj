@@ -219,6 +219,7 @@
     <Compile Include="Models\BookData.cs" />
     <Compile Include="Models\CheckOutLedgerEntry.cs" />
     <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Reader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
