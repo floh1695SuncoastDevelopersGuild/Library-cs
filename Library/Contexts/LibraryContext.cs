@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -11,5 +12,8 @@ namespace Library.Contexts
         public LibraryContext()
             : base("name=Library")
         { }
+
+        public  DbSet<Genre> Genres { get; set; }
+        public DbSet<Book> Books { get; set; }
     }
 }
