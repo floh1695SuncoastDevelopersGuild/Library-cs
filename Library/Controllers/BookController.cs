@@ -20,5 +20,14 @@ namespace Library.Controllers
             }
             return book;
         }
+
+        public Book Post(Book book)
+        {
+            using (var db = new LibraryContext())
+            {
+                db.Books.Add(book);
+            }
+            return book;
+        }
     }
 }
