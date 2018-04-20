@@ -197,7 +197,12 @@
     <Compile Include="Migrations\201804200042189_AddedBooks.Designer.cs">
       <DependentUpon>201804200042189_AddedBooks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804200053512_AddedAuthors.cs" />
+    <Compile Include="Migrations\201804200053512_AddedAuthors.Designer.cs">
+      <DependentUpon>201804200053512_AddedAuthors.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -276,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804200042189_AddedBooks.resx">
       <DependentUpon>201804200042189_AddedBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804200053512_AddedAuthors.resx">
+      <DependentUpon>201804200053512_AddedAuthors.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
