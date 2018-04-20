@@ -213,6 +213,10 @@
     <Compile Include="Migrations\201804200119090_AddedBookFKBookData.Designer.cs">
       <DependentUpon>201804200119090_AddedBookFKBookData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804200127329_AddedReader.cs" />
+    <Compile Include="Migrations\201804200127329_AddedReader.Designer.cs">
+      <DependentUpon>201804200127329_AddedReader.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
@@ -308,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804200119090_AddedBookFKBookData.resx">
       <DependentUpon>201804200119090_AddedBookFKBookData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804200127329_AddedReader.resx">
+      <DependentUpon>201804200127329_AddedReader.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
