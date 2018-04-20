@@ -46,6 +46,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -177,11 +183,43 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Contexts\LibraryContext.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804200029488_InitialWithGenre.cs" />
+    <Compile Include="Migrations\201804200029488_InitialWithGenre.Designer.cs">
+      <DependentUpon>201804200029488_InitialWithGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804200042189_AddedBooks.cs" />
+    <Compile Include="Migrations\201804200042189_AddedBooks.Designer.cs">
+      <DependentUpon>201804200042189_AddedBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804200053512_AddedAuthors.cs" />
+    <Compile Include="Migrations\201804200053512_AddedAuthors.Designer.cs">
+      <DependentUpon>201804200053512_AddedAuthors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804200103324_AddedCheckOutLedger.cs" />
+    <Compile Include="Migrations\201804200103324_AddedCheckOutLedger.Designer.cs">
+      <DependentUpon>201804200103324_AddedCheckOutLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804200113237_AddedBookData.cs" />
+    <Compile Include="Migrations\201804200113237_AddedBookData.Designer.cs">
+      <DependentUpon>201804200113237_AddedBookData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804200119090_AddedBookFKBookData.cs" />
+    <Compile Include="Migrations\201804200119090_AddedBookFKBookData.Designer.cs">
+      <DependentUpon>201804200119090_AddedBookFKBookData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Author.cs" />
+    <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\BookData.cs" />
+    <Compile Include="Models\CheckOutLedgerEntry.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Reader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -238,7 +276,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -252,6 +289,26 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201804200029488_InitialWithGenre.resx">
+      <DependentUpon>201804200029488_InitialWithGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804200042189_AddedBooks.resx">
+      <DependentUpon>201804200042189_AddedBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804200053512_AddedAuthors.resx">
+      <DependentUpon>201804200053512_AddedAuthors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804200103324_AddedCheckOutLedger.resx">
+      <DependentUpon>201804200103324_AddedCheckOutLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804200113237_AddedBookData.resx">
+      <DependentUpon>201804200113237_AddedBookData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804200119090_AddedBookFKBookData.resx">
+      <DependentUpon>201804200119090_AddedBookFKBookData.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
