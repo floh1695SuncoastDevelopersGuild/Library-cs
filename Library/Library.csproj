@@ -188,6 +188,7 @@
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LedgerController.cs" />
     <Compile Include="Controllers\ReaderController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
