@@ -20,5 +20,16 @@ namespace Library.Controllers
             }
             return author;
         }
+
+        // TODO: Cannot accept DataTime's that are null
+        public Author Post(Author author)
+        {
+            using (var db = new LibraryContext())
+            {
+                db.Authors.Add(author);
+                db.SaveChanges();
+            }
+            return author;
+        }
     }
 }
