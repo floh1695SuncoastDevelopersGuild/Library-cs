@@ -205,9 +205,14 @@
     <Compile Include="Migrations\201804200103324_AddedCheckOutLedger.Designer.cs">
       <DependentUpon>201804200103324_AddedCheckOutLedger.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804200113237_AddedBookData.cs" />
+    <Compile Include="Migrations\201804200113237_AddedBookData.Designer.cs">
+      <DependentUpon>201804200113237_AddedBookData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\BookData.cs" />
     <Compile Include="Models\CheckOutLedgerEntry.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -292,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804200103324_AddedCheckOutLedger.resx">
       <DependentUpon>201804200103324_AddedCheckOutLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804200113237_AddedBookData.resx">
+      <DependentUpon>201804200113237_AddedBookData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
