@@ -13,7 +13,7 @@ namespace Library.Controllers
     public class CheckingController : ApiController
     {
         [Route("api/checking/in")]
-        public bool Get(int id)
+        public bool Post(int id)
         {
             bool rv;
             using (var db = new LibraryContext())
@@ -28,13 +28,13 @@ namespace Library.Controllers
                 else
                 {
                     book.IsCheckedOut = false;
-                    book.Ledger.
-                        Add(new CheckOutLedgerEntry
-                        {
-                            BookID = id,
-                            Timestamp = DateTime.Now,
-                            ReaderID = 1 // TODO: Any user for now
-                        });
+                    //book.Ledger.
+                    //    Add(new CheckOutLedgerEntry
+                    //    {
+                    //        BookID = id,
+                    //        Timestamp = DateTime.Now,
+                    //        ReaderID = 1 // TODO: Any user for now
+                    //    });
                     rv = true;
                 }
                 db.SaveChanges();
