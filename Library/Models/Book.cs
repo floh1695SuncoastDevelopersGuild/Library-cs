@@ -13,6 +13,6 @@ namespace Library.Models
         public BookData BookData { get; set; }
 
         public bool IsCheckedOut { get; set; }
-        public DateTime DueBackDate { get; set; }
+        public Nullable<DateTime> DueBackDate { get; set; }
     }
 }

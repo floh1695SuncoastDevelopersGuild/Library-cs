@@ -9,7 +9,7 @@ namespace Library.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public DateTime Born { get; set; }
-        public DateTime Died { get; set; }
+        public Nullable<DateTime> Born { get; set; }
+        public Nullable<DateTime> Died { get; set; }
     }
 }

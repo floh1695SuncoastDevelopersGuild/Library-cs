@@ -186,6 +186,7 @@
     <Compile Include="Contexts\LibraryContext.cs" />
     <Compile Include="Controllers\AuthorController.cs" />
     <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\BookDataController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LedgerController.cs" />
@@ -225,6 +226,10 @@
     <Compile Include="Migrations\201804201620490_AddedReaderToContext.cs" />
     <Compile Include="Migrations\201804201620490_AddedReaderToContext.Designer.cs">
       <DependentUpon>201804201620490_AddedReaderToContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804221632098_AddedNullableDates.cs" />
+    <Compile Include="Migrations\201804221632098_AddedNullableDates.Designer.cs">
+      <DependentUpon>201804221632098_AddedNullableDates.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
@@ -327,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804201620490_AddedReaderToContext.resx">
       <DependentUpon>201804201620490_AddedReaderToContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804221632098_AddedNullableDates.resx">
+      <DependentUpon>201804221632098_AddedNullableDates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
