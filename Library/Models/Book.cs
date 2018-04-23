@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
@@ -13,6 +14,8 @@ namespace Library.Models
         public BookData BookData { get; set; }
 
         public bool IsCheckedOut { get; set; }
-        public DateTime DueBackDate { get; set; }
+        public Nullable<DateTime> DueBackDate { get; set; }
+
+        public ICollection<CheckOutLedgerEntry> Ledger { get; set; }
     }
 }

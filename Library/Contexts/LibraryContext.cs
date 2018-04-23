@@ -18,5 +18,6 @@ namespace Library.Contexts
         public DbSet<Author> Authors { get; set; }
         public DbSet<CheckOutLedgerEntry> CheckOutLedger { get; set; }
         public DbSet<BookData> BookData { get; set; }
+        public DbSet<Reader> Readers { get; set; }
     }
 }
