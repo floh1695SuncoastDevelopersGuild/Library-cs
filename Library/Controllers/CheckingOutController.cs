@@ -12,7 +12,6 @@ namespace Library.Controllers
 {
     public class CheckingOutController : ApiController
     {
-        // NOTE: Note complete
         [Route("api/checking/out")]
         public bool Post(int id)
         {
@@ -29,7 +28,7 @@ namespace Library.Controllers
                 }
                 else
                 {
-                    book.IsCheckedOut = false;
+                    book.IsCheckedOut = true;
                     book.Ledger.
                         Add(new CheckOutLedgerEntry
                         {
