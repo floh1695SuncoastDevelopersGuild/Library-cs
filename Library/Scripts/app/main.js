@@ -11,6 +11,7 @@ app.controller('libraryController',
         // NOTE: results is what is shown on the screen
         $scope.results = [];
 
+        $scope.email = '';
         $scope.search = { title: '', genre: '', author: '', checkedOut: false };
 
         $scope.setBooks = books => {
@@ -61,9 +62,16 @@ app.controller('libraryController',
         };
 
         $scope.toggleCheckedOut = book => {
+            let url = '/api/checking/';
+            let func = book.isCheckedOut ? 'in' : 'out';
+            url += func + '?';
+            if (func === 'out') {
+                url += `email=${$scope.email}&`;
+            }
+            url += `id=${book.id}`
             $http({
                 method: 'POST',
-                url: `/api/checking/${book.isCheckedOut ? 'in' : 'out'}?id=${book.id}`
+                url: url
             }).then(result => {
                 book.isCheckedOut = !book.isCheckedOut;
                 console.log(result.status);

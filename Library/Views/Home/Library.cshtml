@@ -12,20 +12,27 @@
         <div class="left-container">
             <h1>Library</h1>
             <div>
+                <h4>Email</h4>
+                <input ng-model="search.email" />
+            </div>
+
+            <hr />
+
+            <div>
                 <h4>Title</h4>
                 <input ng-model="search.title" />
             </div>
-            
+
             <div>
                 <h4>Genre</h4>
                 <input ng-model="search.genre" />
             </div>
-            
+
             <div>
                 <h4>Author</h4>
                 <input ng-model="search.author" />
             </div>
-            
+
             <div>
                 <h4>Available Books Only</h4>
                 <input type="checkbox" ng-model="search.checkedOut" />
@@ -33,6 +40,8 @@
 
             <button ng-click="searchBooks()">Search</button>
         </div>
+
+        <hr />
 
         <div class="right-container">
             <div ng-repeat="result in results track by $index">

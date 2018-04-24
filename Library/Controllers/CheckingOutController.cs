@@ -13,7 +13,7 @@ namespace Library.Controllers
     public class CheckingOutController : ApiController
     {
         [Route("api/checking/out")]
-        public bool Post(int id)
+        public bool Post(int id, string email)
         {
             bool rv;
             using (var db = new LibraryContext())
@@ -34,7 +34,7 @@ namespace Library.Controllers
                         {
                             BookID = id,
                             Timestamp = DateTime.Now,
-                            ReaderID = 1 // TODO: Any user for now
+                            Reader = new Reader { Email = email }
                         });
                     rv = true;
                 }
