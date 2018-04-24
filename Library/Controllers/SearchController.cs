@@ -12,7 +12,7 @@ namespace Library.Controllers
 {
     public class SearchController : ApiController
     {
-        public IEnumerable<Book> Get(string title = null, string author = null, string genre = null, bool checkedOut = false)
+        public IEnumerable<Book> Get(string title = null, string author = null, string genre = null, bool? checkedOut = null)
         {
             IEnumerable<Book> books;
             using (var db = new LibraryContext())
@@ -36,9 +36,12 @@ namespace Library.Controllers
                     books = books
                         .Where(b => b.BookData.Genre.Name == genre);
                 }
-                books = books
-                    .Where(b => b.IsCheckedOut == checkedOut)
-                    .ToList();
+                if (checkedOut != null)
+                {
+                    books = books
+                        .Where(b => b.IsCheckedOut == checkedOut);
+                }
+                books = books.ToList();
             }
             return books;
         }

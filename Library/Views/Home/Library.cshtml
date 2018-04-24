@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+
+<body ng-app="libraryApp">
+    <div class="main-container" ng-controller="libraryController">
+
+        <div class="left-container">
+            <h1>Library</h1>
+            <div>
+                <h4>Title</h4>
+                <input ng-model="search.title" />
+            </div>
+            
+            <div>
+                <h4>Genre</h4>
+                <input ng-model="search.genre" />
+            </div>
+            
+            <div>
+                <h4>Author</h4>
+                <input ng-model="search.author" />
+            </div>
+            
+            <div>
+                <h4>Available Books Only</h4>
+                <input type="checkbox" ng-model="search.checkedOut" />
+            </div>
+
+            <button ng-click="searchBooks()">Search</button>
+        </div>
+
+        <div class="right-container">
+            <div ng-repeat="result in results track by $index">
+                <div class="result-card">
+                    <h4>Book #{{result.id}} -- {{result.title}} of the {{result.genre}} genre, written by {{result.author}}</h4>
+                    <button ng-click="toggleCheckedOut(result)">{{result.isCheckedOut ? 'Check in' : 'Check out'}}</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

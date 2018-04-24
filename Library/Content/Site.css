@@ -15,3 +15,21 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.main-container,
+.left-container,
+.right-container {
+    /*border: .1em solid red;*/
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.result-card {
+    display: flex;
+    flex-direction: row;
+    padding: .1em;
+    margin: .2em;
+}
